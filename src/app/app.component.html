@@ -1,0 +1,12 @@
+<!-- <h1>Parent Component</h1> -->
+<app-button-component (box)="onCreateBox($event)"></app-button-component>
+
+<input type="checkbox" [value]="true" [checked]="isKeyboardEnabled" (change)="onKeyboardControlChange($event)" />
+Keyboard Control
+
+<div class="fencing">
+  <app-box-component *ngFor="let box of boxes; index as i;" [id]="box.id" [active]="activeBox===box.id"
+    [enableKeyboardEvents]=" activeBox===box.id && isKeyboardEnabled" (click)="onBoxSelect(box)"
+    (onDelete)="onDelete(i)">
+  </app-box-component>
+</div>

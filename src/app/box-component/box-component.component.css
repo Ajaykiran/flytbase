@@ -1,0 +1,14 @@
+.boxed {
+  width: 60px;
+  height: 60px;
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+}
+.boxed.active {
+  background-color: aquamarine;
+  border: 2px solid green;
+}
